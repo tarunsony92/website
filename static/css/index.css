@@ -1,0 +1,36 @@
+.header
+{
+height:100px;
+background-color:pink;
+}
+.nav1
+{
+height:500px;
+background-color:red;
+}
+
+.section{
+    height: 100px;
+    width: 100px;
+    margin: 0px auto;
+    border-radius:50%;
+    overflow: hidden;
+    background-color:white;
+}
+.section img{
+    width: 100%;
+}
+.ml
+{
+margin:0px auto;
+}
+.color
+{
+    background-color:antiquewhite;
+    
+}
+.brand
+{
+color:red;
+}
+

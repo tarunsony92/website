@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+{% include "head.html" %}
+
+<body class="color">
+      <div class="container-fluid">
+          <!--outer start-->
+
+           <!--heading start-->
+
+          <div class="container-fluid">
+
+              <!--navbar start-->
+       {%include "navbar.html" %}
+
+              <!--navbar end-->
+              
+              <div class="row">
+                  <img src="{%static 'images/register.jpg' %}" height="250" width="250">
+              </div>
+
+          </div>
+
+           <!--heading end-->
+
+
+
+          <!--login start-->
+
+          <div class="row mt-5">
+              <div class="col-sm-12 mb-4 ">
+                   <h1 class="text-center"><i>REGISTRATION PAGE</i></h1>
+              </div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+
+
+  <form class="mt-5" action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input name="name" type="text" class="form-control" id="name" value="{{values.name}}" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input name="email" type="email" class="form-control" id="email" value="{{values.email}}" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input name="password" type="password" class="form-control" id="password" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label name='address' for="address" class="col-sm-2 form-label">Address</label>
+                <div class="col-sm-10">
+                    <textarea name="address" class="form-control" id="address" rows="3"  required>{{values.addr}}</textarea>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="pincode" class="col-sm-2 col-form-label">Pincode</label>
+                <div class="col-sm-10">
+                    <input name="pincode" type="text" value="{{values.pin}}" class="form-control" id="pincode" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="phone" class="col-sm-2 col-form-label" >Contact Number</label>
+                <div class="col-sm-10">
+                    <input name="phone" type="text" class="form-control" value="{{values.phone}}" id="phone" required>
+                </div>
+            </div>
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="gender1" value="male" required >
+                        <label class="form-check-label" for="gender1">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="gender2" value="female" required>
+                        <label class="form-check-label" for="gender2">
+                            Female
+                        </label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+  <div class="row mb-3">
+    <div class="col-sm-10 offset-sm-2">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Terms and condition.
+        </label>
+      </div>
+    </div>
+  </div>
+
+     <div class="row mb-3">
+
+
+         <button type="submit" class="btn btn-primary" url="login"> REGISTRATION FORM SUBMIT </button>
+
+
+  <button type="reset" class="btn btn-primary mt-2">RESET</button>
+
+</div>
+</form>
+
+
+            </div>
+          </div>
+
+          <!--login end-->
+
+
+
+                               <!--footer start-->
+{% include "footer.html"%}
+            <!-- footer end -->
+
+
+          <!--outer end-->
+      </div>
+</body>
+</html>

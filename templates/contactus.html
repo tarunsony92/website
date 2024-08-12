@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+{% include "head.html" %}
+
+<body class="color">
+      <div class="container-fluid">
+          <!--outer start-->
+
+           <!--heading start-->
+
+          <div class="container-fluid">
+
+              <!--navbar start-->
+       {%include "navbar.html" %}
+
+              <!--navbar end-->
+
+              <div class="row mt-2">
+                  <img src="{% static 'images/contactus.jpg' %}" height="250" >
+              </div>
+
+          </div>
+
+           <!--heading end-->
+          <!--contact start-->
+
+
+          <div class="row m-3 ">
+
+              <div class="col-sm-12">
+                    <h1 class="text-center">Contact Us</h1>
+              </div>
+
+                <form>
+
+  <div class="row m-3">
+        <div class="col-sm-2"></div>
+    <label for="inputname" class="col-sm-2 col-form-label">NAME*</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="inputname">
+    </div>
+  </div>
+                    <div class="row m-3">
+                          <div class="col-sm-2"></div>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">EMAIL ADDRESS*</label>
+    <div class="col-sm-7">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+                                     <div class="row m-3">
+                                           <div class="col-sm-2"></div>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">MESSAGE*</label>
+    <div class="col-sm-7">
+      <textarea  class="form-control" id="inputtext"></textarea>
+    </div>
+  </div>
+
+
+                    <div class="row mt-5">
+
+
+  <button type="submit" class="btn btn-primary">SEND MASSAGE</button>
+
+                        </div>
+
+
+                </form>
+
+      </div>
+
+
+          <!--contact end-->
+
+
+
+
+
+
+
+                        <!--footer start-->
+{% include "footer.html"%}
+            <!-- footer end -->
+
+
+          <!--outer end-->
+      </div>
+</body>
+</html>

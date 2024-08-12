@@ -1,0 +1,75 @@
+{% extends  "base.html" %}
+{% load static %}
+{%block content%}
+
+
+
+  
+            {% if method == "add_to_cart" %}
+                {% for item in cart %}
+               
+                    
+                    
+                {% endfor %}
+</br>
+
+               <center> <img src="{% static 'images/confirm.jpeg' %}" alt="" width="" height="" class="d-inline-block align-text-top" style="..." ></center></br>
+                <a href="{% url 'checkout' %}"><div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="button">Confirm Order</button>
+                    
+                  </div></a>
+                </br></br>
+
+        {% else %}
+        <form action="{% url 'checkout' %}" method="POST">
+            {% csrf_token %}
+            
+        </br>
+           <!-- <table class="checkout-table" align="center">
+                <input type="text" id="price" name="price" value=" {{Laptopid}} " hidden/>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="text" id="email" name="email" value="{{ customer.emailaddress }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="price">Price</label></td>
+                    <td><input type="text" id="price" name="price" value=" {{Laptop.price}} "></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td><input type="text" id="address" name="address" value="{{ customer.address }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="pincode">Pincode</label></td>
+                    <td><input type="text" id="pincode" name="pincode" value="{{ customer.pincode }}"></td>
+                </tr>
+                <tr>
+                    <td><label for="quantity">Quantity</label></td>
+                    <td><input type="text" id="quantity" name="quantity" value="1"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn btn-primary">Checkout</button></td>
+                </tr>
+            </table> -->
+        </br>
+
+        <center> <img src="{% static 'images/confirm.jpeg' %}" alt="" width="" height="" class="d-inline-block align-text-top" style="..." ></center></br>
+         <a href="{% url 'checkout' %}"><div class="d-grid gap-2 col-6 mx-auto">
+             <button class="btn btn-primary" type="button">Confirm Order</button>
+             
+           </div></a>
+         </br></br>
+        </form>
+        
+{% endif %}
+<br> <br> 
+
+
+
+{% endblock %}

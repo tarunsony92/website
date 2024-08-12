@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+{% include "head.html" %}
+
+<body class="color">
+      <div class="container-fluid">
+          <!--outer start-->
+
+           <!--heading start-->
+
+          <div class="container-fluid">
+
+              <!--navbar start-->
+       {%include "navbar.html" %}
+
+              <!--navbar end-->
+
+          </div>
+
+           <!--heading end-->
+
+
+           <!--navbar laptop start-->
+
+            <div class="row mt-4">
+                <div class="col-sm-1 text-center ml" >
+                    <div class="section" >
+                        <img src="{% static 'images/brand/hp.png' %}"  height="100"  alt="">
+                    </div>
+                    <button type="button" class="btn btn-warning mt-2" style="width:100px">HP</button>
+                </div>
+                <div class="col-sm-1 text-center ml">
+                    <div class="section">
+                        <img src="{% static 'images/brand/dell.png' %}"  height="100"  alt="">
+                    </div>
+                    <button type="button" class="btn btn-warning mt-2" style="width:100px">DELL</button>
+                </div>
+                <div class="col-sm-1 text-center ml">
+                    <div class="section ">
+                        <img src="{% static 'images/brand/lenovo.png' %}" class="p-2" height="100"  alt="">
+                    </div>
+                    <button type="button" class="btn btn-warning mt-2" style="width:100px">LENOVO</button>
+                </div>
+                <div class="col-sm-1 text-center ml">
+                    <div class="section">
+                        <img src="{% static 'images/brand/asus.png' %}"  class="p-2" height="100" width="30" alt="">
+                    </div>
+                    <button type="button" class="btn btn-warning mt-2" style="width:100px">ASUS</button>
+                </div>
+
+                <div class="col-sm-1 text-center ml">
+                    <div class="section">
+                        <img src="{% static 'images/brand/acer.png' %}"  class="p-2"  height="100" width="30"  alt="">
+                    </div>
+                    <button type="button" class="btn btn-warning mt-2" style="width:100px">ACER</button>
+                </div>
+                <div class="col-sm-1 text-center ml">
+                    <div class="section ">
+                        <img src="{% static 'images/brand/apple.png' %}"  height="100" width="30"  alt="">
+                    </div>
+                    <button type="button" class="btn btn-warning mt-2" style="width:100px">APPLE</button>
+                </div>
+                <div class="col-sm-1 text-center ml">
+                    <div class="section">
+                        <img src="{% static 'images/brand/msi.png' %}"  class="p-2" height="100" width="30"  alt="">
+                    </div>
+                    <button type="button" class="btn btn-warning mt-2" style="width:100px">MSI</button>
+                </div>
+            </div>
+
+           <!--navbar laptop end-->
+
+           {% block content %}
+            {% endblock %}
+
+
+                        <!--footer start-->
+{% include "footer.html"%}
+            <!-- footer end -->
+
+
+          <!--outer end-->
+      </div>
+</body>
+</html>

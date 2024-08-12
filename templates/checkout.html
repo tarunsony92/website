@@ -1,0 +1,16 @@
+{% extends  "base.html" %}
+{% load static%}
+{% block title %}
+checkout
+{% endblock %}
+{%block content%}
+</br>
+
+<center> <img src="{% static 'images/thanku.png' %}" alt="" width="" height="" class="d-inline-block align-text-top" style="..." ></center></br>
+<a href="{% url 'index' %}"><div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" type="button">BACK TO HOME</button>
+    
+  </div></a>
+</br></br>
+
+{% endblock %}

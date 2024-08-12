@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+{% include "head.html" %}
+
+<body class="color">
+      <div class="container-fluid">
+          <!--outer start-->
+
+           <!--heading start-->
+
+          <div class="container-fluid">
+
+              <!--navbar start-->
+       {%include "navbar.html" %}
+
+              <!--navbar end-->
+          </div>
+           <!--heading end-->
+          <!--content start-->
+
+            <div class="row mt-3">
+                <img src="{% static 'images/email.jpg' %}" height="300" width="500"/>
+
+            </div>
+
+          <div class="row mt-3">
+              <div class="col-sm-12">
+                  <h1 class="text-center">EMAIL SUPPORT</h1>
+              </div>
+          </div>
+          <div class="row mt-2">
+              <div class="col-sm-12">
+                  <h1 class="text-center"><a href="{% url 'index' %}"> email@gamil.com</a></h1>
+              </div>
+          </div>
+
+
+
+          <!--content end-->
+
+
+
+                        <!--footer start-->
+{% include "footer.html"%}
+            <!-- footer end -->
+
+
+          <!--outer end-->
+      </div>
+</body>
+</html>

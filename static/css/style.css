@@ -1,0 +1,11 @@
+.smi
+{
+    list-style-type: none;
+}
+.smi li{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 50%;
+}

@@ -1,0 +1,66 @@
+.font
+{
+    color:skyblue;
+    background-color:grey;
+    margin:0px;
+}
+.font h1
+{
+    text-align:center;
+    font-style: italic;
+    font-style:underline;
+}
+.img
+{
+    margin:0px;
+}
+h4
+{
+    font-style:left;
+    color:red;
+}
+footer {
+   
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-links a {
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+  
+  .social-media a {
+    color: #333;
+    margin: 0 5px;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    color: #007bff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content,
+  .container {
+    padding: 0 20px;
+  }
+  
+  .footer-content::after {
+    content: "";
+  }
